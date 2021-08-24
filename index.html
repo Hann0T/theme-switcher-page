@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script defer src="./scripts/index.js"></script>
+  <title>Frontend Mentor | Dark Mode</title>
+</head>
+
+<body>
+  <main class="app dark-theme">
+    <header class="main-header">
+      <div class="container">
+        <div class="main-header__title">
+          <h2>Social Media Dashboard</h2>
+          <p>Total Followers: 23,004</p>
+        </div>
+        <div class="main-header__theme-switcher">
+          <p>Dark Mode</p>
+          <label for="theme-switcher" class="switcher"></label>
+          <input type="checkbox" id="theme-switcher">
+        </div>
+      </div>
+    </header>
+    <section class="social-media">
+      <div class="container">
+        <div class="social-media__card social-media__card--facebook">
+          <p class="social-media__card--id">@nathanf</p>
+          <h2 class="social-media__card--followers">
+            1987
+            <span>Followers</span>
+          </h2>
+          <p class="social-media__card--today text--up">12 Today</p>
+        </div>
+        <div class="social-media__card social-media__card--twitter">
+          <p class="social-media__card--id">@nathanf</p>
+          <h2 class="social-media__card--followers">
+            1044
+            <span>Followers</span>
+          </h2>
+          <p class="social-media__card--today text--up">99 Today</p>
+        </div>
+        <div class="social-media__card social-media__card--instagram">
+          <p class="social-media__card--id">@realnathanf</p>
+          <h2 class="social-media__card--followers">
+            11k
+            <span>Followers</span>
+          </h2>
+          <p class="social-media__card--today text--up">1099 Today</p>
+        </div>
+        <div class="social-media__card social-media__card--youtube">
+          <p class="social-media__card--id">Nathan F.</p>
+          <h2 class="social-media__card--followers">
+            8239
+            <span>Followers</span>
+          </h2>
+          <p class="social-media__card--today text--down">144 Today</p>
+        </div>
+      </div>
+    </section>
+    <section class="overview">
+      <div class="container">
+        <h2>Overview - Today</h2>
+        <div class="overview__content">
+          <article class="overview__card">
+            <div class="overview__card--top">
+              <p>Page Views</p>
+              <img class="social-media--logo" src="./images/facebook-logo.svg" alt="facebook-logo">
+            </div>
+            <div class="overview__card--bottom">
+              <p>87</p>
+              <p class="text--up">3%</p>
+            </div>
+          </article>
+          <article class="overview__card">
+            <div class="overview__card--top">
+              <p>Likes</p>
+              <img class="social-media--logo" src="./images/facebook-logo.svg" alt="facebook-logo">
+            </div>
+            <div class="overview__card--bottom">
+              <p>52</p>
+              <p class="text--down">2%</p>
+            </div>
+          </article>
+          <article class="overview__card">
+            <div class="overview__card--top">
+              <p>Likes</p>
+              <img class="social-media--logo" src="./images/instagram-logo.svg" alt="instagram-logo">
+            </div>
+            <div class="overview__card--bottom">
+              <p>5462</p>
+              <p class="text--up">2257%</p>
+            </div>
+          </article>
+          <article class="overview__card">
+            <div class="overview__card--top">
+              <p>Profile Views</p>
+              <img class="social-media--logo" src="./images/instagram-logo.svg" alt="instagram-logo">
+            </div>
+            <div class="overview__card--bottom">
+              <p>52k</p>
+              <p class="text--up">1375%</p>
+            </div>
+          </article>
+          <article class="overview__card">
+            <div class="overview__card--top">
+              <p>Retweets</p>
+              <img class="social-media--logo" src="./images/twitter-logo.svg" alt="twitter-logo">
+            </div>
+            <div class="overview__card--bottom">
+              <p>117</p>
+              <p class="text--up">303%</p>
+            </div>
+          </article>
+          <article class="overview__card">
+            <div class="overview__card--top">
+              <p>Likes</p>
+              <img class="social-media--logo" src="./images/twitter-logo.svg" alt="twitter-logo">
+            </div>
+            <div class="overview__card--bottom">
+              <p>507</p>
+              <p class="text--up">553%</p>
+            </div>
+          </article>
+          <article class="overview__card">
+            <div class="overview__card--top">
+              <p>Likes</p>
+              <img class="social-media--logo" src="./images/youtube-logo.svg" alt="youtube-logo">
+            </div>
+            <div class="overview__card--bottom">
+              <p>107</p>
+              <p class="text--down">19%</p>
+            </div>
+          </article>
+          <article class="overview__card">
+            <div class="overview__card--top">
+              <p>Total Views</p>
+              <img class="social-media--logo" src="./images/youtube-logo.svg" alt="youtube-logo">
+            </div>
+            <div class="overview__card--bottom">
+              <p>1407</p>
+              <p class="text--down">12%</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

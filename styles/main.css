@@ -1,0 +1,215 @@
+:root {
+    --Lime-Green: hsl(163, 72%, 41%);
+    --Bright-Red: hsl(356, 69%, 56%);
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --YouTube: hsl(348, 97%, 39%);
+    --Instagram: linear-gradient(
+        to right,
+        hsl(37, 97%, 70%),
+        hsl(329, 70%, 58%)
+    );
+    --Toggle: linear-gradient(to left, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.dark-theme {
+    --bg-color: hsl(230, 17%, 14%);
+    --text-color: hsl(0, 0%, 100%);
+    --second-text-color: hsl(228, 34%, 66%);
+    --card-bg: hsl(228, 28%, 20%);
+    --top-bg-pattern: hsl(232, 19%, 15%);
+}
+.light-theme {
+    --bg-color: hsl(0, 0%, 100%);
+    --card-bg: hsl(227, 47%, 96%);
+    --text-color: hsl(228, 12%, 44%);
+    --second-text-color: hsl(230, 17%, 14%);
+    --top-bg-pattern: hsl(225, 100%, 98%);
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.app {
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.main-header {
+    position: relative;
+    box-sizing: border-box;
+    padding: 30px 0;
+}
+.main-header::before {
+    content: "";
+    width: 100%;
+    height: calc(100% + 50px);
+    background-color: var(--top-bg-pattern);
+    position: absolute;
+    top: 0;
+}
+.main-header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.main-header__title > p {
+    color: var(--second-text-color);
+}
+.main-header__theme-switcher {
+    display: flex;
+    align-items: center;
+}
+.main-header__theme-switcher > p {
+    color: var(--second-text-color);
+}
+
+#theme-switcher {
+    transform: scale(0);
+}
+.switcher {
+    display: block;
+    min-width: 60px;
+    height: 30px;
+    position: relative;
+    background: var(--Toggle);
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.switcher::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(15%, -50%);
+    transition: transform 200ms ease-in-out;
+}
+.switcher.active::before {
+    transform: translate(179%, -50%);
+}
+
+.social-media {
+    padding: 30px 0;
+}
+.social-media > .container,
+.overview__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+    gap: 15px;
+}
+
+.social-media--logo {
+    width: 30px;
+    height: 30px;
+}
+
+.social-media__card {
+    display: flex;
+    min-height: 250px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--card-bg);
+    text-align: center;
+    border-radius: 5px;
+}
+.social-media__card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px 5px 0 0;
+}
+.social-media__card--facebook::before {
+    background-color: var(--Facebook);
+}
+.social-media__card--twitter::before {
+    background-color: var(--Twitter);
+}
+.social-media__card--instagram::before {
+    background: var(--Instagram);
+}
+.social-media__card--youtube::before {
+    background-color: var(--YouTube);
+}
+
+.social-media__card--id {
+    margin: 1em 0 0;
+    color: var(--second-text-color);
+}
+
+.social-media__card--followers {
+    font-size: 4em;
+    margin: 0.25em 0;
+}
+.social-media__card--followers > span {
+    display: block;
+    color: var(--second-text-color);
+    font-size: 15px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.text--up {
+    color: var(--Lime-Green);
+}
+.text--down {
+    color: var(--Bright-Red);
+}
+.text--up::before {
+    content: "☝ ";
+}
+.text--down::before {
+    content: "👇 ";
+}
+
+.overview__card {
+    box-sizing: border-box;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-bg);
+    border-radius: 5px;
+}
+.overview__card--top > p {
+    color: var(--second-text-color);
+}
+.overview__card--bottom > p:nth-child(1) {
+    font-size: 30px;
+    font-weight: bold;
+}
+.overview__card--top,
+.overview__card--bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1440px) {
+    .app {
+        padding: 0 30px;
+    }
+    .main-header::before {
+        width: calc(100% + 60px);
+        transform: translateX(-30px);
+    }
+}
